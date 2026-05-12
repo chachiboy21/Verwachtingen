@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verwachtingen</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: transparent;
+    padding: 1.5rem;
+    color: #1a1a1a;
+  }
+
+  h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.01em;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+  }
+
+  .toggle { display: none; }
+
+  .card {
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #e0e0dc;
+  }
+
+  .card-header {
+    background: #0F6E56;
+    padding: 14px 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    user-select: none;
+  }
+
+  .card-num {
+    font-size: 11px;
+    font-weight: 600;
+    color: #5DCAA5;
+    min-width: 16px;
+    padding-top: 2px;
+  }
+
+  .card-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #E1F5EE;
+    flex: 1;
+    line-height: 1.4;
+  }
+
+  .chevron {
+    font-size: 18px;
+    color: #5DCAA5;
+    display: inline-block;
+    transition: transform 0.25s ease;
+    line-height: 1;
+  }
+
+  .toggle:checked ~ .card-header .chevron {
+    transform: rotate(180deg);
+  }
+
+  .card-body {
+    display: none;
+    padding: 16px;
+    border-top: 1px solid #e8e8e4;
+  }
+
+  .toggle:checked ~ .card-body {
+    display: block;
+  }
+
+  .section-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: #0F6E56;
+    margin-bottom: 8px;
+  }
+
+  .card-desc {
+    font-size: 13px;
+    color: #333;
+    line-height: 1.65;
+    margin-bottom: 14px;
+  }
+
+  .card-bullets {
+    list-style: none;
+    border-top: 1px solid #ececea;
+    padding-top: 12px;
+  }
+
+  .card-bullets li {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.55;
+    padding: 5px 0 5px 16px;
+    position: relative;
+  }
+
+  .card-bullets li::before {
+    content: "›";
+    position: absolute;
+    left: 0;
+    color: #0F6E56;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  .hint {
+    font-size: 12px;
+    color: #999;
+    margin-top: 1.2rem;
+    text-align: right;
+  }
+</style>
+</head>
+<body>
+
+<h1>Verwachtingen</h1>
+
+<div class="grid">
+
+  <div class="card">
+    <input type="checkbox" class="toggle" id="c1">
+    <label class="card-header" for="c1">
+      <span class="card-num">1</span>
+      <span class="card-title">Veiligheidsgedrag</span>
+      <span class="chevron">&#8964;</span>
+    </label>
+    <div class="card-body">
+      <p class="section-label">Algemene verwachting</p>
+      <p class="card-desc">Veiligheid gaat altijd voor. Je toont consistent veilig gedrag op alle aangeleerde posten. Je gebruikt je PBM's en arbeidsmiddelen correct, volgt alle veiligheids- en shopregels, werkt ordelijk, meldt risico's en incidenten tijdig en spreekt collega's respectvol aan op veilig en onveilig gedrag. Je accepteert dat je wordt aangesproken.</p>
+      <ul class="card-bullets">
+        <li>Je ondersteunt de organisatie actief in het naleven van veiligheidsregels binnen je team</li>
+        <li>Je bent een voorbeeld voor anderen op vlak van veiligheid</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <input type="checkbox" class="toggle" id="c2">
+    <label class="card-header" for="c2">
+      <span class="card-num">2</span>
+      <span class="card-title">Kwaliteit & First Time Right</span>
+      <span class="chevron">&#8964;</span>
+    </label>
+    <div class="card-body">
+      <p class="section-label">Algemene verwachting</p>
+      <p class="card-desc">Je levert werk dat meteen juist is: je volgt instructies exact, gebruikt de juiste onderdelen en tools, controleert je werk, verwerkt afwijkingen correct en draagt actief bij aan het voorkomen van fouten. Je meldt verstoringen steeds correct via VOB. Je accepteert dat je wordt aangesproken en gaat hier constructief mee aan de slag.</p>
+      <ul class="card-bullets">
+        <li>Je ondersteunt de organisatie actief in het behalen van de verwachte kwaliteit binnen je team</li>
+        <li>Je bent een voorbeeld voor anderen op vlak van kwalitatief werk</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <input type="checkbox" class="toggle" id="c3">
+    <label class="card-header" for="c3">
+      <span class="card-num">3</span>
+      <span class="card-title">Lorem Ipsum Drie</span>
+      <span class="chevron">&#8964;</span>
+    </label>
+    <div class="card-body">
+      <p class="section-label">Algemene verwachting</p>
+      <p class="card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <ul class="card-bullets">
+        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut labore</li>
+        <li>Sed do eiusmod tempor incididunt ut labore et dolore magna</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <input type="checkbox" class="toggle" id="c4">
+    <label class="card-header" for="c4">
+      <span class="card-num">4</span>
+      <span class="card-title">Lorem Ipsum Vier</span>
+      <span class="chevron">&#8964;</span>
+    </label>
+    <div class="card-body">
+      <p class="section-label">Algemene verwachting</p>
+      <p class="card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+      <ul class="card-bullets">
+        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+        <li>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <input type="checkbox" class="toggle" id="c5">
+    <label class="card-header" for="c5">
+      <span class="card-num">5</span>
+      <span class="card-title">Lorem Ipsum Vijf</span>
+      <span class="chevron">&#8964;</span>
+    </label>
+    <div class="card-body">
+      <p class="section-label">Algemene verwachting</p>
+      <p class="card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+      <ul class="card-bullets">
+        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut labore</li>
+        <li>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <input type="checkbox" class="toggle" id="c6">
+    <label class="card-header" for="c6">
+      <span class="card-num">6</span>
+      <span class="card-title">Lorem Ipsum Zes</span>
+      <span class="chevron">&#8964;</span>
+    </label>
+    <div class="card-body">
+      <p class="section-label">Algemene verwachting</p>
+      <p class="card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+      <ul class="card-bullets">
+        <li>Lorem ipsum dolor sit amet consectetur adipiscing elit</li>
+        <li>Sed do eiusmod tempor incididunt ut labore et dolore</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <input type="checkbox" class="toggle" id="c7">
+    <label class="card-header" for="c7">
+      <span class="card-num">7</span>
+      <span class="card-title">Lorem Ipsum Zeven</span>
+      <span class="chevron">&#8964;</span>
+    </label>
+    <div class="card-body">
+      <p class="section-label">Algemene verwachting</p>
+      <p class="card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
+      <ul class="card-bullets">
+        <li>Lorem ipsum dolor sit amet consectetur adipiscing elit labore</li>
+        <li>Ut enim ad minim veniam quis nostrud exercitation ullamco</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <input type="checkbox" class="toggle" id="c8">
+    <label class="card-header" for="c8">
+      <span class="card-num">8</span>
+      <span class="card-title">Lorem Ipsum Acht</span>
+      <span class="chevron">&#8964;</span>
+    </label>
+    <div class="card-body">
+      <p class="section-label">Algemene verwachting</p>
+      <p class="card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+      <ul class="card-bullets">
+        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut labore</li>
+        <li>Sed do eiusmod tempor incididunt ut labore et dolore magna</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <input type="checkbox" class="toggle" id="c9">
+    <label class="card-header" for="c9">
+      <span class="card-num">9</span>
+      <span class="card-title">Lorem Ipsum Negen</span>
+      <span class="chevron">&#8964;</span>
+    </label>
+    <div class="card-body">
+      <p class="section-label">Algemene verwachting</p>
+      <p class="card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+      <ul class="card-bullets">
+        <li>Lorem ipsum dolor sit amet consectetur adipiscing elit</li>
+        <li>Quis nostrud exercitation ullamco laboris nisi ut aliquip</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <input type="checkbox" class="toggle" id="c10">
+    <label class="card-header" for="c10">
+      <span class="card-num">10</span>
+      <span class="card-title">Lorem Ipsum Tien</span>
+      <span class="chevron">&#8964;</span>
+    </label>
+    <div class="card-body">
+      <p class="section-label">Algemene verwachting</p>
+      <p class="card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+      <ul class="card-bullets">
+        <li>Lorem ipsum dolor sit amet consectetur adipiscing elit labore</li>
+        <li>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<p class="hint">Klik op een kaart om de details te bekijken.</p>
+
+</body>
+</html>
